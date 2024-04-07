@@ -1,0 +1,687 @@
+body{
+    height: 6000px;
+ 
+}
+ol{
+    list-style: none;
+}
+/* Start custom checkbox */
+.holder{
+    padding: 10px;
+    margin: 0;
+    width: 700px;
+    background-color: #fff;
+    font-size: 18px;
+   
+
+}
+h2{
+    color: rgba(0, 0, 0, 0.651);
+}
+.holder > div{
+    padding: 5px;
+    background-color: #eee;
+    margin-top: 2px;
+    
+}
+.holder input[type="checkbox"]{
+    -webkit-appearance: none;
+            appearance: none;
+}
+label{
+    position: relative;
+    margin-bottom: 5px;
+}
+.holder label::before{
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: #ddd;
+    display: inline-block; 
+    position: relative;
+    top: 2px;
+    right: 5px;
+    border-radius: 50%;
+    
+}
+.holder input[type="checkbox"]:checked + label::before{
+    content: "\f058" !important;
+    font-family: "Font Awesome 5 Free";
+    position: relative;
+    border: none;
+   
+   
+}
+/* End custom checkbox */
+/* Custom List Items */
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ul li{
+    font-weight: bold;
+    font-size: 19px;
+    color: #444;
+    padding: 5px;
+    margin: 5px;
+}
+ul li::before{
+    content: '';
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(104, 104, 153);
+    right: 8px;
+    top: 5px;
+    
+}
+ul li:first-child::before{
+    background-color: rgb(64, 83, 146);
+    border-radius: 50%;
+}
+ul li:nth-child(2)::before{
+    background-color: rgb(19, 98, 143);
+}
+ul li:nth-child(3)::before{
+    background-color: rgb(187, 71, 216);
+    border-radius: 50%;
+}
+ul li:nth-child(4)::before{
+    background-color: rgb(27, 153, 23);
+}
+/*End Custom List Items */
+
+/* Start Folded Paper Corner With  Before &  After */
+.parent{
+    width: 200px;
+    height: 150px;
+    background-color: #ddd;
+    margin: 50px auto;
+    text-align: center;
+    line-height: 150px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px 0px 10px 10px;
+
+}
+.parent::after{
+    content:'';
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    border-width: 0px 20px 20px 00px;
+    border-color: rgb(167, 167, 179) transparent;
+    border-style: solid;
+}
+.parent::before{
+    content:'';
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    border-width: 0px 20px 20px 00px;
+    border-color: blue #fff;
+    border-style: solid;
+    -webkit-box-shadow:-2px -2px 10px #000;
+    box-shadow:-2px -2px 10px #000;
+}
+/* End Folded Paper Corner With  Before &  After */
+/* Start  Hover Scale Effects With Overlay */
+.overlay{
+    width: 200px;
+    height: 150px;
+    background-color: #888;
+    padding: 10px;
+    margin: 50px auto;
+    color: #fff;
+    text-align: center;
+    line-height: 150px;
+    position: relative;
+    color: #fff;
+    
+}
+.overlay::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color:rgba(0, 0, 0, .2);
+    display: block;
+    position: absolute;
+    color: #fff;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: transform .2s ease-in-out;
+    -moz-transition: transform .2s ease-in-out;
+    -o-transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+    z-index: 1;
+}
+.overlay:hover::before{
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+.overlay span{
+    position: relative;
+    z-index: 2;
+}
+/* Start Timeline For Comments */
+.timeline{
+    width: 600px;
+    background-color: #FFF;
+    padding: 0px 20px 0px 20px;
+    margin: 50px auto;
+    border-left: 3px solid #000f;
+}
+.timeline p{
+    border: 1px solid #ddd;
+    padding: 15px;
+    color: #222;
+    position: relative;
+}
+.timeline p::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(237, 239, 245);
+    top: 30px;
+    left: -28px;
+    border-radius: 50%;
+    border: 1px solid #000;
+}
+.timeline p::after{
+    content: "";
+    position: absolute;
+    top: 27px;
+    left: -21px;
+    border-width: 10px 10px 10px 10px;
+    border-color: transparent rgb(87, 77, 77) transparent transparent;
+    border-style: solid;
+}
+/* End Timeline Comments */
+/* Start Speech Bubble */
+.speesh-bubble{
+    width: 300px;
+    height: 150px;
+    background-color: #888;
+    margin: 50px auto; 
+    line-height: 150px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+.speesh-bubble::before{
+    content: "";
+    display: block;
+    position: absolute;
+    border-width: 0px 10px 10px 10px;
+    border-color: red transparent rgba(20, 8, 8, 0.473) transparent;
+    border-style: solid;
+    top: -10px;
+    left: 140px;
+}
+/* End Speech Bubble */
+/*  Start Custom Form Input File */
+.Custom-input{
+    width: 300px;
+    height: 30px;
+    background-color: #ece6e5;
+    position: relative;
+    z-index: 3;
+    border: 1px solid #ddd;
+}
+.Custom-input input[type="file"]{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 5;
+    position: relative;
+}
+.Custom-input span{
+    /* display: block; */
+    position: absolute;
+    top: 7px;
+    left: 5px;
+}
+.Custom-input::after{
+    content: "upload";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ddd;
+    width: 100px;
+    height: 100%;
+    font: bold 15px tahoma arial;
+    line-height: 30px;
+    text-align: center;
+}
+/* End Custom Input File */
+
+/* Start Code Creat Table With Div */
+.myDiv{
+    display: table;
+    width: 300px;
+    height: 100px;
+    border:1px solid #ddd;
+}
+.myDiv .rows{
+    display:table-row ;
+}
+.myDiv .rows .cell{
+    display: table-cell;
+    border:1px solid rgb(185, 179, 179);
+    vertical-align: middle;
+    text-align: center;
+}
+.rowsh {
+    display: table-header-group;
+}
+.myDiv h5{
+    display: table-caption;
+}
+/* End Code Creat Table With Div */
+
+/* Start Button Border Effect */
+
+.b1{
+    width: 100px;
+    height: 32px;
+    background-color: #3992a4;
+    color: #fff;
+    display:block;
+    text-align: center;
+    line-height: 32px;
+    text-decoration: none;
+    margin: 20px 200px;
+}
+.b1::after,
+.b1::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 4px;
+    background-color: inherit;
+    transition: .5s;
+}
+.bl::before{ 
+    top: -5px;
+    left: 0; 
+}
+.bl::after{
+    bottom: -5px;
+    right: 0;
+}
+.bl:hover::before:hover,
+.bl:hover::after:hover{
+    width: 100%;
+}
+/* Start Code Hide attribute Placeholder */
+.inpu1:focus{
+    outline: none;
+}
+.inpu1:focus::-webkit-input-placeholder{
+    opacity: 0;
+    transition: 02s;
+}
+.inpu1:focus::-moz-input-placeholder{
+    opacity: 0;
+}
+.inpu1:focus::-o-input-placeholder{
+    opacity: 0;
+}
+/* End Code Hide attribute Placeholder */
+
+/* Start Input Fill Effects From All Directions */
+
+form{
+    width: 300px;
+    margin: auto;
+}
+form > div{
+    margin: 5px;
+  
+}
+form .from-left,
+form .from-right,
+form .from-middle{
+    position: relative;
+}
+form .from-left input,
+form .from-right input,
+form .from-middle input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding:5px 0;
+}
+form .from-left input:focus,
+form .from-right input:focus
+form .from-middle input:focus{
+    outline: none;
+}
+
+form .from-left input +.border,
+form .from-right input +.border,
+form .from-middle input +.border{
+    transition: .4s;
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #3992a4;
+}
+form .from-left input +.border{
+    left: 0;
+    bottom: 0;
+}
+form .from-right input +.border{
+    right: 0;
+    bottom: 0;
+}
+form .from-middle input +.border{
+    left: 50%;
+    bottom: 0;
+}
+form .from-left input:focus +.border,
+form .from-right input:focus +.border{
+    width: 100%;
+}
+form .from-middle input:focus +.border{
+    left: 0;
+    width: 100%;
+}
+/* End Input Fill Effects From All Directions */
+/* Start First Creating many Spinner Loading */
+.spinner{
+    width: 500px;
+    height: 120px;
+    margin: 50px auto;
+    position: relative;
+}
+.spinner .circle{
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: turquoise;
+    animation: rotate 2s linear infinite;
+    position: absolute;
+}
+.spinner .circle.one{
+    width: 50px;
+    height: 50px;
+    top: 50px;
+    left: 50px;
+    animation-duration: .75s;
+    
+}
+.spinner .circle.two{
+    width:75px;
+    height: 75px;
+    top: 38px;
+    left: 38px;
+    animation-duration: .85s;
+}
+.spinner .circle.three{
+    width:100px;
+    height: 100px;
+    top: 26px;
+    left: 26px;  
+    animation-duration: 1s;  
+}
+@keyframes rotate {
+    From{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+/* Start Seconed Creating many Spinner Loading */
+
+.spinner2{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 50px auto;
+    border: 4px solid rgba(46, 13, 209, 0.24);
+    border-left: 4px solid #888;
+    animation: rotate2 1.2s linear infinite;
+}
+@keyframes rotate2 {
+    From{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+/* Ending Seconed Creating many Spinner Loading  */
+/* End Creating many Spinner Loading */
+/* Starting  Image Effect Fill Border From All Direction At Once  */
+
+.img-border{
+     width: 450px;
+     height: 300px;
+     margin: 50px auto;
+     position: relative;
+     transition: .3s;
+  
+}
+.img-border img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+h4{
+    position: absolute;
+    color: rgb(5, 0, 0);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 3px solid #444;
+    padding: 5px;
+    margin: 5px;
+    opacity: 0;
+    transition:.5s;
+    border-radius: 5px;
+}
+.img-border > span{
+    position: absolute;
+    background-color: darkcyan;
+    transition: .5s;
+}
+.img-border .one{
+    top: 0;
+    left: 0;
+    width:5px;
+    height:0;
+}
+.img-border .two{
+    bottom: 0;
+    left: 0;
+    width:0;
+    height:3px;
+}
+
+.img-border .three{
+    bottom: 0;
+    right: 0;
+    width:5px;
+    height:0;
+}
+
+.img-border .four{
+    top: 0;
+    right: 0;
+    width:0;
+    height:3px;
+}
+.img-border:hover .one,
+.img-border:hover .three{
+    height: 100%;
+}
+.img-border:hover .two,
+.img-border:hover .four{
+    width:100%;
+}
+.img-border:hover img{
+    transition-delay: .3S;
+    opacity: .6;
+   
+}
+.img-border:hover h4{
+    transition-delay: .4S;
+    opacity: 1;
+   
+}
+/* one by one */
+.img-border{
+    width: 450px;
+    height: 300px;
+    margin: 50px auto;
+    position: relative;
+    transition: .3s;
+ 
+}
+.img-border img{
+   width: 100%;
+   height: 100%;
+   position: absolute;
+}
+h4{
+   position: absolute;
+   color: rgb(5, 0, 0);
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   font-size: 16px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   border: 3px solid #444;
+   padding: 5px;
+   margin: 5px;
+   opacity: 0;
+   transition:.5s;
+   border-radius: 5px;
+}
+.img-border > span{
+   position: absolute;
+   background-color: darkcyan;
+   transition: .5s;
+}
+.img-border .one{
+   top: 0;
+   left: 0;
+   width:5px;
+   height:0;
+}
+.img-border .two{
+   bottom: 0;
+   left: 0;
+   width:0;
+   height:3px;
+}
+
+.img-border .three{
+   bottom: 0;
+   right: 0;
+   width:5px;
+   height:0;
+}
+
+.img-border .four{
+   top: 0;
+   right: 0;
+   width:0;
+   height:3px;
+}
+.img-border:hover .one,
+.img-border:hover .three{
+   height: 100%;
+}
+.img-border:hover .two,
+.img-border:hover .four{
+   width:100%;
+}
+.img-border:hover .one{
+    transition-delay: 0;
+}
+.one-by-one:hover .two{
+    transition-delay: .3s;
+}
+.one-by-one:hover .three{
+    transition-delay: .6s;
+}
+.one-by-one:hover .four{
+    transition-delay: .9s;
+}
+.one-by-one:hover img{
+   transition-delay: .3S;
+   opacity: .6;
+  
+}
+.img-border:hover h4{
+   transition-delay: 1.2s;
+   opacity: 1;
+  
+}
+/* Start turn off Number input spinner */
+input[type="number"]{
+    -webkit-appearance: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    appearance: none;
+}
+/* end turn off Number input spinner */
+/* Start Example Counter Reset */
+body{
+    counter-reset: first 2 seconed 2;
+}
+
+h1::before{
+    counter-increment: first;
+    content: counter(first)')';
+}
+
+ol li::before{
+    counter-increment: seconed;
+    content: counter(seconed) ')';
+}
+/* End Example Counter Reset */
+/* Start edit placeholder */
+.inpu2::-webkit-input-placeholder{
+    color: #8235c2;
+}
+.inpu2::-moz-input-placeholder{
+    color: #8235c2;
+}
+.inpu2::-input-placeholder{
+    color: #8235c2;    
+}
+.inpu2:focus::-webkit-input-placeholder{
+    transition: .5s;
+    opacity: 0;
+}
+
+/*Start Example Use CSS Variables ( Custom Properties )*/
+body{
+    --mainColor:red;
+    --defultCcolor:rgba(0, 0, 0, 0.651);
+    --FontsST:italic
+}
+h2{
+    color: var(--defultCcolor);
+    font-style: var(--FontsST);
+}
+/* end Example Use CSS Variables ( Custom Properties ) */
